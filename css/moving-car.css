@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.sky{
+    height: 550px;
+    width: 100%;
+    background-image: url("../image/Car_Animation_Img/sky.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.city-1,
+.city-2{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.city-1{
+    left: 0;
+    animation-name: city-1;
+}
+
+.city-2{
+    left: 100%;
+    animation-name: city-2; 
+    
+}
+
+@keyframes city-1 {
+    from{
+        left: 0;
+    }
+    to{
+        left: -100%;
+    }
+}
+
+@keyframes city-2 {
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0;
+    }
+}
+
+
+
+
+
+.moving-car{
+    height: 190px;
+    width: 100%;
+    position: relative;
+}
+
+.road-1,
+.road-2{
+    width: 200%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.road-1{
+    left: 0;
+    animation-name: road-1;
+}
+
+@keyframes road-1 {
+    from{
+        left: 0;
+    }
+    to{
+        left: -100%;
+    }
+}
+
+.car{
+    height: 150px;
+    width: 350px;
+    position: absolute;
+    bottom:125px;
+    left: 550px;
+    animation-name: car;
+    animation-duration: .2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes car {
+    0%{
+        bottom: 125px;
+    }
+    50%{
+        bottom: 122px;
+    }
+
+    100%{
+        bottom: 125px;
+    }
+}
+
+.whell-1,
+.whell-2{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom: 133px;
+    animation-name: whell;
+    animation-duration: .05s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.whell-1{
+    left: 582px;
+}
+
+.whell-2{
+    left: 797px;
+}
+
+@keyframes whell {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
